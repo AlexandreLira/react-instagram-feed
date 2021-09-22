@@ -34,14 +34,27 @@ class RenderPostImage extends Component {
 }
 
 class RenderPostFooter extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            like: false
+        }
+    }
     render(){
         return(
             <div className="PostFooter">
                 <div className="PostFooter-buttons">
                     <span>
-                        <button type="button">
-                            <img className="PostFooter-button-icon" src="https://icons-for-free.com/iconfiles/png/512/heart-131965017458786724.png"/>
-                            <p>{this.props.likes}</p>
+                        <button type="button" onClick={() =>  this.setState({like: !this.state.like})}>
+                            <img 
+                                className="PostFooter-button-icon" 
+                                src={this.state.like ? 
+                                    "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png"
+                                    : 
+                                    "https://icons-for-free.com/iconfiles/png/512/heart-131965017458786724.png" 
+                                    }
+                            />
+                             <p>{this.props.likes}</p>
                         </button>
                     </span>
                     <span>
