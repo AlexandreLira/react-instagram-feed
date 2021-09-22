@@ -1,5 +1,5 @@
 .Post {
-    width: 80vh;
+    width: 36rem;
     
     background-color: #FFFFFF;
     border-radius: 20px;
@@ -42,7 +42,7 @@
 
 .PostImage img {
     width: 100%;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 .PostFooter {
@@ -58,8 +58,8 @@
     background-color: transparent;
 }
 .PostFooter-button-icon {
-    width: 5vh;
-    height: 5vh;
+    width: 2rem;
+    height: 2rem;
     object-fit: fill;
 }
 
